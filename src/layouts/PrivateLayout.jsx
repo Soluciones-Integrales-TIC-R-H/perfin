@@ -1,24 +1,21 @@
-import React from 'react'
-import {Outlet} from 'react-router-dom'
-import Siderbar from '../components/Siderbar'
-import Navbar from '../components/Navbar'
-import FooterComponent from '../components/FooterComponent'
-
-
-
+import React from "react";
+import { Outlet } from "react-router-dom";
+import Siderbar from "../components/Siderbar";
+import Navbar from "../components/Navbar";
+import FooterComponent from "../components/FooterComponent";
 
 const PrivateLayout = () => {
-
   return (
     <>
       <div className="content">
         <div className="row">
           <div className="col-md-3">
-            <header>
-              <NavBar />
-            </header>
-          </div>
+            <Siderbar />
+            </div>
           <div className="col-md-9">
+            <header>
+              <Navbar />
+            </header>
             <main>
               <Outlet />
             </main>
@@ -31,6 +28,6 @@ const PrivateLayout = () => {
       </footer>
     </>
   );
-}
+};
 
-export default PrivateLayout
+export default PrivateLayout;
